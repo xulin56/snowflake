@@ -1,0 +1,241 @@
+@mixin flex {
+    display:-webkit-box;
+    display:-moz-box;
+    display:-o-box;
+    display:-ms-box;
+    display:box;
+    display:flex;
+}
+
+@mixin column{
+    -webkit-box-orient:vertical;
+    -ms-box-orient:vertical;
+    -moz-box-orient:vertical;
+    -o-box-orient:vertical;
+    box-orient:vertical;
+    flex-direction:column;
+}
+@mixin justifyContent {
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    -ms-box-pack:center;
+    -o-box-pack:center;
+    box-pack:center;
+    justify-content:center;
+}
+
+@mixin alignItems{
+    -webkit-box-align:center;
+    -ms-box-align:center;
+    -moz-box-align:center;
+    -o-box-align:center;
+    box-align:center;
+    align-items:center;
+}
+
+
+html,body{
+    height:100%;
+    width:100%;
+}
+.body-bg{
+    height:100%;
+    width:100%;
+    background-image:url(../images/body-bg.png);
+    background-size:100%;
+    background-color:#3671a9;
+}
+.Snowflake-login{
+    width:454px;
+    margin:0 auto;
+    h2{
+        text-align:center;
+        font-size:48px;
+        color:#fff;
+    }
+    .login{
+        background-color:#fff;
+        padding:10px 40px;
+        border-radius:2px;
+        .type-group{
+            overflow:hidden;
+            border-bottom:1px solid #d2d2d2;
+            h3{
+                width:50%;
+                text-align:center;
+                font:18px/63px Miscrosoft YaHei;
+                color:#666;
+                cursor:pointer;
+            }
+            h3.active{
+                border-bottom:1px solid #279cf2;
+            }
+        }
+        
+    }
+}
+.sign-in{
+    padding-top:45px;
+    li{
+        padding-bottom:18px;
+    }
+    input{
+        width:316px;
+        height:39px;
+        border:1px solid #dadada;
+        color:#d8d8d8;
+        font:14px/39px Miscrosoft YaHei;
+        padding-left:52px;
+    }
+    .login-operate{
+        text-align:center;
+        margin:38px 0;
+    }
+}
+.sign-up{
+    padding-top:38px;
+    li{
+        padding-bottom:15px;
+    }
+    span{
+        display:inline-block;
+        width:70px;
+        text-align:right;
+        padding-right:15px;
+    }
+    input{
+        width:244px;
+        height:34px;
+        border:1px solid #959595;
+        
+    }
+    .sign-btn{
+        display:block;
+        margin:32px auto;
+    }
+}
+.sign-btn{
+    width:100px;
+    height:30px;
+    font:15px/30px Miscrosoft YaHei;
+    color:#fff;
+    background-color:#279cf2;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+
+.title-snowflake{
+    background-color:#0067a6;
+    color:#fff;
+    font:26px/50px Miscrosoft YaHei;
+    padding-left:35px;
+}
+.apply-license{
+    height:95%;
+    box-sizing:border-box;
+    padding:0 60px 60px 60px;
+    background-color:#edf0f5;
+    h3{
+        font:22px/60px Miscrosoft YaHei;
+        color:#666;  
+    }
+    .apply-content{
+        height:95%;
+        box-sizing:border-box;
+        background-color:#fff;
+        @include flex;
+        @include column;
+        @include justifyContent;
+        @include alignItems;
+        .sign-btn{
+            margin:32px auto;
+        }
+        dl{
+            text-align:left;
+            color:#666;
+            font-size:15px;
+            padding:35px 0;
+            margin-left:-308px;
+            dt{
+
+            }
+            dd{
+               padding:0 25px; 
+            }
+        }
+        .product-detail{
+            width:632px;
+            border:1px solid #bfbfbf;
+            height:358px;
+            h3{
+                font:bold 18px/52px Miscrosoft YaHei;
+                color:#666;
+                margin:0 18px;
+                border-bottom:1px solid #bfbfbf;
+            }
+            ul{
+                display:-webkit-box;
+                display:-moz-box;
+                display:-o-box;
+                display:-ms-box;
+                display:box;
+                -webkit-box-orient:vertical;
+                -ms-box-orient:vertical;
+                -moz-box-orient:vertical;
+                -o-box-orient:vertical;
+                box-orient:vertical;
+                -webkit-box-pack:center;
+                -moz-box-pack:center;
+                -ms-box-pack:center;
+                -o-box-pack:center;
+                box-pack:center;
+                -webkit-box-align:center;
+                -ms-box-align:center;
+                -moz-box-align:center;
+                -o-box-align:center;
+                box-align:center;
+                padding-top:25px;
+               li{
+                    margin-bottom:15px;
+                    span{
+                        color:#999;
+                        font-size:14px;
+                        display:inline-block;
+                        width:70px;
+                        text-align:right;
+                    }
+                    input{
+                        width:234px;
+                        height:34px;
+                        border:1px solid #bfbfbf;
+                        padding-left:10px;
+                    }
+                } 
+            }
+            
+        }
+    }
+        
+}
+.circle{
+    width:10px;
+    height:10px;
+    border:1px solid #a9a9a9;
+    border-radius:50%;
+    position:relative;
+    display:inline-block;
+    cursor:pointer;
+}
+.active:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background-color:#279cf2;
+    margin-top:-3px;
+    margin-left:-3px;
+}

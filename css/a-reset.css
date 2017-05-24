@@ -7,7 +7,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, button,details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -94,5 +94,14 @@ hr {
 input, select {
     vertical-align:middle;
 }
+.clearfix:after{
+    height:0;
+    content:"";
+    display:block;
+    visibility: hidden;
+    clear:both;
+}
 a{text-decoration: none;}
 a:hover, a:visited, a:link, a:active {text-decoration: none;color:#000;}
+.fg-l{float:left;}
+.fg-r{float:right;}
